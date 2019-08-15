@@ -1,0 +1,13 @@
+{
+    "name": "asd-lt/laravel-paysera",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Simonas Dimavičius",
+            "email": "asd@asd.lt"
+        }
+    ],
+    "require": {
+        "webtopay/libwebtopay": "^1.6"
+    }
+}
