@@ -21,7 +21,7 @@
                 "Asd\\Paysera\\ServiceProvider"
             ],
             "aliases": {
-                "Paysera": "Asd\\Paysera\\Facades\\AsdPaysera",
+                "Paysera": "Asd\\Paysera\\Facades\\AsdPaysera"
             }
         }
     },
