@@ -9,5 +9,21 @@
     ],
     "require": {
         "webtopay/libwebtopay": "^1.6"
-    }
+    },
+    "autoload": {
+        "psr-4": {
+            "Asd\\Paysera\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Asd\\Paysera\\ServiceProvider"
+            ],
+            "aliases": {
+                "Paysera": "Asd\\Paysera\\Facades\\AsdPaysera",
+            }
+        }
+    },
+    "minimum-stability": "dev"
 }
