@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
 use Asd\Paysera\Events\PayseraPaymentCallback;
-use Asd\Paysera\Models\Payment;
 use WebToPay_Exception_Callback;
 
 class PayseraWrapper
@@ -54,12 +53,7 @@ class PayseraWrapper
     {
         $amount = $this->prepareAmount($amount);
 
-        $payment = Payment::create([
-            'amount' => $amount,
-            'order_id' => $orderId,
-        ]);
-
-        $requestData = $this->buildPaymentRequest($amount, $payment->getKey());
+        $requestData = $this->buildPaymentRequest($amount, $orderId);
 
         return $this->preparePaymentUrl($requestData);
     }
