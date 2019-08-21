@@ -11,6 +11,34 @@ use WebToPay_Exception_Callback;
 class PayseraWrapper
 {
     /**
+     * Generate`s accept page
+     *
+     * @return string
+     */
+    public function pageAccept()
+    {
+        if (view()->exists(config('asd.accept_view', 'paysera.accept'))) {
+            return view(config('asd.accept_view', 'paysera.accept'));
+        } else {
+            return 'Accept';
+        }
+    }
+
+    /**
+     * Generate`s cancel page
+     *
+     * @return string
+     */
+    public function pageCancel()
+    {
+        if (view()->exists(config('asd.cancel_view', 'paysera.cancel'))) {
+            return view(config('asd.cancel_view', 'paysera.cancel'));
+        } else {
+            return 'Cancel';
+        }
+    }
+
+    /**
      * Paysera callback process
      *
      * @param \Illuminate\Http\Request $request
