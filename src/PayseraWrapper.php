@@ -188,7 +188,7 @@ class PayseraWrapper
         }
 
         if (!empty($config['cancel_url'])) {
-            $this->acceptUrl = $config['cancel_url'];
+            $this->cancelUrl = $config['cancel_url'];
         }
     }
 
